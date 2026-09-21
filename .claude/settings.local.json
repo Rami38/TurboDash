@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\\\\Assets\" -Recurse)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\\\\Assets\" -Directory | ForEach-Object { Write-Output $_.Name })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\\\\Assets\" | Where-Object { -not $_.PSIsContainer } | Select-Object -ExpandProperty Name)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\" | Where-Object { $_.PSIsContainer } | Select-Object -ExpandProperty Name)",
+      "Bash(cat \"Assets/Scripts/DriftSmoke.cs.meta\")",
+      "Bash(cat \"Assets/Scripts/PauseMenu.cs.meta\")",
+      "Bash(cat \"Assets/Scripts/RaceManager.cs.meta\")",
+      "Bash(powershell -Command \"Get-ChildItem -Recurse -Include '*.wav','*.mp3','*.ogg' Assets/ | Select-Object FullName | Format-List\")",
+      "Bash(python3 *)",
+      "Bash(node *)",
+      "Bash(Select-String -Path \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\\\\ProjectSettings\\\\ProjectSettings.asset\" -Pattern \"Input|input\")",
+      "Bash(Select-Object -First 20)",
+      "Bash(Format-Table LineNumber, Line -AutoSize)",
+      "Bash(Get-ChildItem -Path . -Directory)",
+      "Bash(Select-Object Name)",
+      "PowerShell(cd \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\"; Get-ChildItem -Path \"Assets\" -Recurse | Where-Object { -not $_.PSIsContainer } | Select-Object FullName | Sort-Object FullName)",
+      "Bash(Get-ChildItem -File)",
+      "Bash(Select-Object Name, Length)",
+      "PowerShell(cd \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\\\\Assets\\\\Scenes\"; Get-ChildItem -File | Select-Object Name, @{Name=\"Size\\(KB\\)\";Expression={[math]::Round\\($_.Length/1KB,2\\)}} | Format-Table -AutoSize)",
+      "Bash(xargs grep -l \"98aec6ae46a1fb343b3f5ff07a417122\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Yacoub\\\\Akina drift lite\\\\Assets\" -Directory)",
+      "Bash(awk -F: '{if \\($2 >= 8570 && $2 <= 8660\\) print}')",
+      "PowerShell(Set-Content *)"
+    ]
+  }
+}
